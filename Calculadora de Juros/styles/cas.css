@@ -1,0 +1,15 @@
+*{
+    margin: 5px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input, button{
+    width: 90vw;
+    height: 60px;
+    font-size: large;
+    text-align: center;
+}

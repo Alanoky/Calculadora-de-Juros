@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/cas.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calcular Juros Simples e Composto</h1>
+
+    <div>
+        <div></div>
+    <label for="">Número</label>
+    </div>
+
+    <div><input type="number" value=""  id="capital" step=".01" placeholder="Capital"></div>
+
+    <div><input type="number" value="" id="taxa" step=".01" placeholder="Taxa"></div>
+
+    <div><input type="number" value="" id="tempo" step=".01" placeholder="Tempo"></div>
+
+    <div><h2 id="resultado"></h2></div>
+
+    <div><button id="simples">Simples</button></div>
+
+    <div><button id="composto">Composto</button></div>
+
+
+    </div>
+
+
+    <script>
+
+        var capital = document.getElementById("capital")
+        var taxa = document.getElementById("taxa")
+        var tempo = document.getElementById("tempo")
+        var resultado = document.getElementById("resultado")
+        var botao1 = document.getElementById("simples")
+        var botao2 = document.getElementById("composto")
+
+
+        function simples() {
+           resultado.innerHTML = parseFloat(capital.value) + (capital.value * (taxa.value / 100)) * tempo.value
+        }
+
+        function composto() {
+           resultado.innerHTML = capital.value * ((1 + (taxa.value / 100)) ** tempo.value)
+        }
+
+        botao1.addEventListener("click", simples)
+        botao2.addEventListener("click", composto)
+    </script>
+
+</body>
+</html>
